@@ -1,0 +1,18 @@
+<project>
+    <property name="dest.dir" value="static/"/>
+    <property name="src.dir" value="templates/my-web-page/"/>
+    <target name="resources">
+        <copy todir="${dest.dir}css" overwrite="true">
+            <fileset dir="${src.dir}css" includes="**"/>
+        </copy>
+        <copy todir="${dest.dir}js" overwrite="true">
+            <fileset dir="${src.dir}js" includes="**"/>
+        </copy>
+        <copy todir="${dest.dir}images" overwrite="true">
+            <fileset dir="${src.dir}images" includes="**"/>
+        </copy>
+        <copy todir="${dest.dir}fonts" overwrite="true">
+            <fileset dir="${src.dir}fonts" includes="**"/>
+        </copy>
+    </target>
+</project>
