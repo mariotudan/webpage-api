@@ -5,6 +5,7 @@ git:
   submodules: false
 before_install:
   - chmod +x mvnw
+after_success:
   - git submodule update --init --recursive
   - ant resources -buildfile src/main/resources/build.xml
 deploy:
