@@ -1,13 +1,8 @@
 language: java
 jdk:
  - oraclejdk8
-git:
-  submodules: false
 before_install:
   - chmod +x mvnw
-after_success:
-  - git submodule update --init --recursive
-  - ant resources -buildfile src/main/resources/build.xml
 deploy:
   provider: heroku
   api-key: $HEROKU_API_KEY
