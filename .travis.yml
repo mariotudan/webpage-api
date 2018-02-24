@@ -5,7 +5,6 @@ git:
   submodules: false
 before_install:
   - chmod +x mvnw
-  - git submodule add https://github.com/mariotudan/my-web-page src/main/resources/templates/my-web-page
   - git submodule update --init --recursive
   - ant resources -buildfile src/main/resources/build.xml
 deploy:
